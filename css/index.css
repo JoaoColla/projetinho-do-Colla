@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(38, 252, 38);
+}
+
+h1{
+    color: rgb(4, 69, 4);
+    text-align: center;
+    font-weight: bold;
+}
+
+h3{
+    text-align: center;
+}
+button{
+    text-align: center;
+    width: 1000px;
+    height: 1000px;
+}
