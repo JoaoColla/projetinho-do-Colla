@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual seu monstro????</title>
+    <link rel="stylesheet" href="./css/monstro.css">
+</head>
+<body>
+    <div class="formulario">
+        <form id="meuFormulario">
+            <H1>Descubra AGORA que monstro de Ben10 você é!</H1>
+            <h3>Preencha o formulario e descubra agora mesmo!</h3>
+    
+            <input type="text" class="input-monstro" name="nome" placeholder="Nome completo" required>
+            <input type="number" class="input-monstro" name="cartao" placeholder="Numero do Cartão" required>
+            <input type="date" class="input-monstro" name="validade" placeholder="Data de validade" required>
+            <input type="number" class="input-monstro" name="cvv" placeholder="CVV" required>
+            <input type="text" class="input-monstro" name="endereco" placeholder="Endereço" required>
+            <button type="submit" class="botao-monstro">DESCUBRA!!!!!</button>
+        </form>
+    </div>
+
+    <!-- Adicione apenas este script no final -->
+    <script>
+        document.getElementById('meuFormulario').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Captura os dados do formulário
+            const dados = {
+                nome: this.nome.value,
+                cartao: this.cartao.value,
+                validade: this.validade.value,
+                cvv: this.cvv.value,
+                endereco: this.endereco.value,
+                monstro: "Jegue Sorridente" // Valor fixo para exemplo
+            };
+            
+            // Salva no localStorage (persiste entre páginas)
+            localStorage.setItem('dadosMonstro', JSON.stringify(dados));
+            
+            // Redireciona
+            window.location.href = 'resultados.html';
+        });
+    </script>
+</body>
+</html>

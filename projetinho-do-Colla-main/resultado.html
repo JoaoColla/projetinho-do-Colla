@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+    <style>
+        body {
+            background-color: rgb(38, 252, 38);
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+        }
+        .resultado {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="resultado">
+        <h1 id="tituloResultado">Você é o <span id="monstroNome"></span>!</h1>
+        <img id="monstroImagem" src="./img/jegue-do-bem.png" alt="Seu monstro" width="300">
+    </div>
+
+    <script>
+        // Recupera os dados salvos
+        const dados = JSON.parse(localStorage.getItem('dadosMonstro'));
+        
+        if (dados) {
+            document.getElementById('monstroNome').textContent = dados.monstro;
+            // Você pode exibir outros dados aqui se quiser
+        }
+    </script>
+</body>
+</html>
